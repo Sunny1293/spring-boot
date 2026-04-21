@@ -51,4 +51,5 @@ class EmployeeController {
                                                            @RequestBody Map<String, Object> updates) {
         return ResponseEntity.ok(employeeService.updatePartialEmployee(id, updates));
     }
+
 }

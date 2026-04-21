@@ -1,15 +1,14 @@
 package com.example.spring_boot_demo.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
 @Getter
 @Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Employee {
 
     @Id
@@ -18,5 +17,8 @@ public class Employee {
 
     private String name;
 
+    @Column(unique = true)
     private String email;
+
+    private Long salary;
 }
